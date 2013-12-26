@@ -11,6 +11,11 @@
 |
 */
 
+/**
+* INSERT
+*/
+Route::any('/sync/{model}/{id?}', 'SyncController@actionStore');
+
 Route::controller('/dashboard', 'DashboardController');
 
 Route::get('/', function()
