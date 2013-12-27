@@ -21,8 +21,16 @@
         background-color: rgba(0, 0, 0, 0.15);
     }
     .ui.modal{
-        border: 2px solid #5B687C;
+        border: 1px solid #AEB1B6;
         border-radius: 0;
+        box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.2);
+    }
+    .ui.input input {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+        font-size: 13px;
+        font-family: arial !important;
+        padding: 8px 0;
     }
   </style>
   
