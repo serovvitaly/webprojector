@@ -6,6 +6,11 @@ class SyncController extends BaseController {
     {
         $modelName = ucfirst( strtolower( trim($model) ) );
         
+        $user = Auth::user();
+        
+        $data = Input::all();
+        
+        $data['user_id'] = $user->id;        
         
         if (class_exists( $modelName )) {
             switch ( Request::getMethod() ) {
@@ -15,7 +20,7 @@ class SyncController extends BaseController {
                     break;
                 // create
                 case 'POST':
-                    $mod = $modelName::create((array) Input::all());;
+                    $mod = $modelName::create($data);
                     break;
                 // update 
                 case 'PUT':

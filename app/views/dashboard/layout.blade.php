@@ -9,12 +9,19 @@
   <!--link rel="stylesheet" type="text/css" href="/packages/bootstrap/css/bootstrap.min.css"-->
   
   <style type="text/css">
-    html{
+    html, html input{
         font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-        font-family: Tahoma;
+        font-family: Tahoma !important;
         font-size: 13px;
     }
     .ui.menu{
+        border-radius: 0;
+    }
+    .ui.dimmer{
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+    .ui.modal{
+        border: 2px solid #5B687C;
         border-radius: 0;
     }
   </style>
@@ -187,6 +194,7 @@
                   Dashboard.ControllerProject.add({
                       title: $('#modal-project-add input').val()
                   });
+                  $('#modal-project-add input').val('');
                   //return false;
               }
           })

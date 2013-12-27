@@ -15,9 +15,35 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
-	{
-		return View::make('hello');
+    public function getIndex()
+    {   
+        return View::make('index');
+    }
+
+	public function postIndex()
+	{   
+        $email = Input::get('email');
+        $password = Input::get('password');
+        
+        if (Auth::attempt(array('email' => $email, 'password' => $password))) {
+            return Redirect::intended('dashboard');
+        } else {
+            $user = User::where('email', '=', $email)->first();
+            if (!$user) {
+                $user = new User;
+                
+                $user->email    = $email;
+                $user->password = Hash::make($password);
+                
+                $user->save();
+                
+                if (Auth::attempt(array('email' => $email, 'password' => $password))) {
+                    return Redirect::intended('dashboard');
+                }
+            }
+        }
+        
+		return View::make('index');
 	}
 
 }

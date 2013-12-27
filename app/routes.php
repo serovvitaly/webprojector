@@ -18,7 +18,4 @@ Route::any('/sync/{model}/{id?}', 'SyncController@actionStore');
 
 Route::controller('/dashboard', 'DashboardController');
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::controller('/', 'HomeController');

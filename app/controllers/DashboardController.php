@@ -9,7 +9,10 @@ class DashboardController extends BaseController
     
     public function __construct()
     {
-        $this->_jsApplicationPath = $_SERVER['DOCUMENT_ROOT'] . '/' . trim($this->_jsApplicationPath, '/');        
+        $this->beforeFilter('auth'); 
+        
+        $this->_jsApplicationPath = $_SERVER['DOCUMENT_ROOT'] . '/' . trim($this->_jsApplicationPath, '/');
+        
     }
     
     
