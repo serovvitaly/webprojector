@@ -6,6 +6,8 @@
   <link rel="stylesheet" type="text/css" href="/packages/common/normalize.css">
   <link rel="stylesheet" type="text/css" href="/packages/semantic/packaged/css/semantic.min.css">
   
+  <!--link rel="stylesheet" type="text/css" href="/packages/bootstrap2/css/bootstrap.min.css"-->
+  
   <!--link rel="stylesheet" type="text/css" href="/packages/bootstrap/css/bootstrap.min.css"-->
   
   <style type="text/css">
@@ -168,12 +170,12 @@
 <script src="/packages/semantic/packaged/javascript/semantic.min.js"></script>
 
 <script src="/packages/handlebarsjs/handlebars-v1.2.0.js"></script>
-<script src="/packages/starter-kit-1.2.0/js/libs/ember-1.2.0.js"></script>
+<!--script src="/packages/starter-kit-1.2.0/js/libs/ember-1.2.0.js"></script-->
 
-<!--
+
 <script src="/packages/backbone/underscore-min.js"></script>
 <script src="/packages/backbone/backbone.js"></script>
--->
+
 
 <!-- models -->
 <? foreach ($models as $model) { ?>
@@ -209,7 +211,7 @@ console.table = undefined;
 function builtLayout(){
     $('.ui.dropdown').dropdown();
     
-    $('.title').popup();
+    //$('.title').popup();
     
     $('#dashboard-base-sidebar')
         .sidebar({overlay: false})
@@ -226,7 +228,7 @@ function builtLayout(){
             },
             onApprove : function() {
                 //
-            $('#modal-project-add input').val('');
+                $('#modal-project-add input').val('');
                 //return false;
             }
         })

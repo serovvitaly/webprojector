@@ -61,5 +61,16 @@ class DashboardController extends BaseController
     {
         //
     }
+    
+    public function getBoot()
+    {
+        $this->layout = View::make('dashboard.boot');
+        
+        $this->_prepareJsFiles('collections');
+        $this->_prepareJsFiles('models');
+        //$this->_prepareJsFiles('templates');
+        $this->_prepareJsFiles('views');
+        $this->_prepareJsFiles('controllers');
+    }
 
 }
