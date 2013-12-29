@@ -6,14 +6,15 @@
   <link rel="stylesheet" type="text/css" href="/packages/common/normalize.css">
   <link rel="stylesheet" type="text/css" href="/packages/semantic/packaged/css/semantic.min.css">
   
-  <!--link rel="stylesheet" type="text/css" href="/packages/bootstrap2/css/bootstrap.min.css"-->
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
   
-  <!--link rel="stylesheet" type="text/css" href="/packages/bootstrap/css/bootstrap.min.css"-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300,700,300italic&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
   
   <style type="text/css">
-    html, html input{
+    html, html input, body{
         font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
         font-family: Tahoma !important;
+        font-family: 'Open Sans', sans-serif;
         font-size: 13px;
     }
     .ui.menu{
@@ -27,198 +28,36 @@
         border-radius: 0;
         box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.2);
     }
-    .ui.input input {
+    .ui.input input{
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 0;
         font-size: 13px;
         font-family: arial !important;
         padding: 8px 0;
     }
-    .ui.selection.dropdown {
+    .ui.selection.dropdown{
         border-radius: 1px !important;
+    }
+    .super-title{
+        font-size: 46px;
+        font-weight: 300;
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+        font-family: 'Open Sans', sans-serif;
+        /*font-family: 'Open Sans Condensed', sans-serif;*/
     }
   </style>
   
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   
 </head>
-<body> 
-  <div class="ui inverted menu" id="dashboard-top-sidebar">
-    <a class="item sidebarer"><i class="double angle right big icon" style="margin: -14px -4px -9px -2px"></i></a>
-    <a class="item"><i class="home icon"></i> Главная</a>
-    <div class="ui dropdown item">
-      Проекты<i class="dropdown icon"></i>
-      <div class="menu ui transition hidden">
-        <a class="item modal-project-add">Новый проект</a>
-        <a class="item">Список проектов</a>
-      </div>
-    </div>
-    <a class="item"><i class="user icon"></i> Задачи</a>
-
-    <div class="right menu" style="margin-right: 10px;">
-        <div class="ui top right pointing dropdown item">
-          <i class="user icon"></i>
-          <div class="menu ui transition hidden">
-            <a class="item">Настройки профиля</a>
-            <a class="item">Russian</a>
-            <a class="item">Выход</a>
-          </div>
-        </div>
-    </div>
-
-  </div>
-  
-  
-  <div class="ui left sidebar vertical inverted menu" id="dashboard-base-sidebar">
-      
-      <div class="item">
-        <div class="ui selection dropdown">
-          <input type="hidden" name="gender">
-          <div class="text" style="width: 148px;">Female</div>
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <div class="item" data-value="1">Male</div>
-            <div class="item active" data-value="0">Female</div>
-          </div>
-        </div>
-        
-        <div class="ui icon button" style="width: auto; border-radius: 1px; border-width: 0;">
-          <i class="add icon title modal-project-add" data-content="Создать проект" data-position="right center"></i>
-        </div>
-        
-      </div>
-      
-      
-      <div style="height: 50px;"></div>
-      
-      <a class="active item">
-        <div class="ui teal label">1</div>
-        Inbox
-      </a>
-      <a class="item">
-        <div class="ui label">51</div>
-        Spam
-      </a>
-      <a class="item">
-        <div class="ui label">1</div>
-        Updates
-      </a>
-
-
-      
-      <div style="height: 50px;"></div>
-      
-
-          <a class="item">
-            Site Title
-          </a>
-          <div class="item">
-            <b>Grouped Section</b>
-            <div class="menu">
-              <a class="item">Subsection 1</a>
-              <a class="active item">Subsection 1</a>
-              <a class="item">Subsection 1</a>
-            </div>
-          </div>
-          <div class="ui dropdown item">
-            Dropdown <i class="dropdown icon"></i>
-            <div class="menu">
-              <div class="item">Choice 1</div>
-              <div class="item">Choice 2</div>
-              <div class="item">Choice 3</div>
-            </div>
-          </div>
-
-      
-      <div style="height: 50px;"></div>
-  
-      <div class="header item">
-        <i class="user icon"></i>
-        Проекты
-      </div>
-      <div class="projects-list-menu"></div> 
-      
-  </div>
-   
-<script id="tpl-base-layout" type="text/template">
-  <div>
-    <div id="dashboard-top-sidebar">dashboard-top-sidebar</div>
-    <div id="dashboard-base-sidebar">dashboard-base-sidebar</div>
-    <div id="dashboard-context"><!-- context --></div>
-  </div>
-</script>  
-
-<script id="tpl-dashboard-top-sidebar" type="text/template">
-  <div>Hello world</div>
-</script>
-
-<script id="foo" type="text/template">
-   <h2>Hope</h2>
-</script>
-
-  
-  <div class="ui small modal" id="modal-project-add">
-      <i class="close icon"></i>
-      <div class="content">
-        <div class="field">
-            <div class="ui left labeled icon input" style="width: 100%;">
-              <input type="text" placeholder="Введите название проекта">
-              <i class="user icon"></i>
-              <div class="ui corner label">
-                <i class="icon asterisk"></i>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="actions">
-        <div class="ui positive small button">Сохранить</div>
-        <div class="ui negative small button">Отмена</div>
-      </div>
-    </div>
-  
+<body>
+<div id="dashboard-application-layout"></div>
 
 <script src="/packages/common/require.js"></script>
   
 <script src="/packages/common/json2.js"></script>
 <script src="/packages/semantic/packaged/javascript/semantic.min.js"></script>
-
-<!--script src="/packages/handlebarsjs/handlebars-v1.2.0.js"></script-->
-<!--script src="/packages/starter-kit-1.2.0/js/libs/ember-1.2.0.js"></script-->
-
-<!--
-<script src="/packages/backbone/underscore-min.js"></script>
-<script src="/packages/backbone/backbone.js"></script> 
-
-<script src="/packages/marionette/public/javascripts/backbone.babysitter.js"></script>
-<script src="/packages/marionette/public/javascripts/backbone.wreqr.js"></script>
-<script src="/packages/marionette/lib/backbone.marionette.js"></script>
--->  
-
-
-<!-- models -->
-<? foreach ($models as $model) { ?>
-<script src="/app/models/<?= $model ?>"></script>
-<? } ?>  
-
-<!-- collections -->
-<? foreach ($collections as $collection) { ?>
-<script src="/app/collections/<?= $collection ?>"></script>  
-<? } ?>
-
-<!-- templates -->
-<?= View::make('dashboard.templates.projects.item-1') ?>
-
-
-<!-- views -->
-<? foreach ($views as $view) { ?>
-<script src="/app/views/<?= $view ?>"></script>  
-<? } ?>
-
-<!-- controllers -->
-<? foreach ($controllers as $controller) { ?>
-<script src="/app/controllers/<?= $controller ?>"></script>  
-<? } ?>
-
 
   
 <script>
