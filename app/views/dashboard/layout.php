@@ -39,9 +39,36 @@
     }
   </style>
   
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  
 </head>
-<body>
+<body> 
+  <div class="ui inverted menu" id="dashboard-top-sidebar">
+    <a class="item sidebarer"><i class="double angle right big icon" style="margin: -14px -4px -9px -2px"></i></a>
+    <a class="item"><i class="home icon"></i> Главная</a>
+    <div class="ui dropdown item">
+      Проекты<i class="dropdown icon"></i>
+      <div class="menu ui transition hidden">
+        <a class="item modal-project-add">Новый проект</a>
+        <a class="item">Список проектов</a>
+      </div>
+    </div>
+    <a class="item"><i class="user icon"></i> Задачи</a>
 
+    <div class="right menu" style="margin-right: 10px;">
+        <div class="ui top right pointing dropdown item">
+          <i class="user icon"></i>
+          <div class="menu ui transition hidden">
+            <a class="item">Настройки профиля</a>
+            <a class="item">Russian</a>
+            <a class="item">Выход</a>
+          </div>
+        </div>
+    </div>
+
+  </div>
+  
+  
   <div class="ui left sidebar vertical inverted menu" id="dashboard-base-sidebar">
       
       <div class="item">
@@ -112,39 +139,23 @@
       <div class="projects-list-menu"></div> 
       
   </div>
-  
-  <script type="text/x-handlebars">
-  
-  <div class="ui inverted menu">
-    <a class="item sidebarer"><i class="double angle right big icon" style="margin: -14px -4px -9px -2px"></i></a>
-    <a class="item"><i class="home icon"></i> Главная</a>
-    <div class="ui dropdown item">
-      Проекты<i class="dropdown icon"></i>
-      <div class="menu ui transition hidden">
-        <a class="item modal-project-add">Новый проект</a>
-        <a class="item">Список проектов</a>
-      </div>
-    </div>
-    <a class="item"><i class="user icon"></i> Задачи</a>
-
-    <div class="right menu" style="margin-right: 10px;">
-        <div class="ui top right pointing dropdown item">
-          <i class="user icon"></i>
-          <div class="menu ui transition hidden">
-            <a class="item">Настройки профиля</a>
-            <a class="item">Russian</a>
-            <a class="item">Выход</a>
-          </div>
-        </div>
-    </div>
-
+   
+<script id="tpl-base-layout" type="text/template">
+  <div>
+    <div id="dashboard-top-sidebar">dashboard-top-sidebar</div>
+    <div id="dashboard-base-sidebar">dashboard-base-sidebar</div>
+    <div id="dashboard-context"><!-- context --></div>
   </div>
-  
-  <div id="dashboard-context">
-      <!-- context -->
-      {{outlet}}
-  </div>
-  </script>
+</script>  
+
+<script id="tpl-dashboard-top-sidebar" type="text/template">
+  <div>Hello world</div>
+</script>
+
+<script id="foo" type="text/template">
+   <h2>Hope</h2>
+</script>
+
   
   <div class="ui small modal" id="modal-project-add">
       <i class="close icon"></i>
@@ -165,16 +176,23 @@
       </div>
     </div>
   
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/packages/common/require.js"></script>
+  
 <script src="/packages/common/json2.js"></script>
 <script src="/packages/semantic/packaged/javascript/semantic.min.js"></script>
 
-<script src="/packages/handlebarsjs/handlebars-v1.2.0.js"></script>
+<!--script src="/packages/handlebarsjs/handlebars-v1.2.0.js"></script-->
 <!--script src="/packages/starter-kit-1.2.0/js/libs/ember-1.2.0.js"></script-->
 
-
+<!--
 <script src="/packages/backbone/underscore-min.js"></script>
-<script src="/packages/backbone/backbone.js"></script>
+<script src="/packages/backbone/backbone.js"></script> 
+
+<script src="/packages/marionette/public/javascripts/backbone.babysitter.js"></script>
+<script src="/packages/marionette/public/javascripts/backbone.wreqr.js"></script>
+<script src="/packages/marionette/lib/backbone.marionette.js"></script>
+-->  
 
 
 <!-- models -->
@@ -201,7 +219,7 @@
 <script src="/app/controllers/<?= $controller ?>"></script>  
 <? } ?>
 
-<script src="/app/dashboard.js?foo=<?= rand(1000, 9999) ?>"></script>
+
   
 <script>
   
@@ -237,6 +255,8 @@ function builtLayout(){
 }
       
 </script>
+
+<script src="/app/dashboard.js?foo=<?= rand(1000, 9999) ?>"></script>
   
 </body>
 </html>
