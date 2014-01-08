@@ -10,7 +10,7 @@
 <a class="item"><i class="user icon"></i> Задачи</a>
 <div class="right menu" style="margin-right: 10px;">
     <div class="ui top right pointing dropdown item">
-      <i class="user icon"></i>
+      <i class="setting large icon" style="margin: -8px -6px -4px -5px"></i>
       <div class="menu ui transition hidden">
         <a class="item">Настройки профиля</a>
         <a class="item">Russian</a>
