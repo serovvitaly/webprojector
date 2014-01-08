@@ -1,5 +1,5 @@
 
-<h1 class="super-title">Сайт организации "Неостудка"</h1>
+<h1 class="super-title">Первый проект</h1>
 <div style="margin: 20px 0">
   <a class="ui small linkedin button">Создать задачу</a>
 </div>

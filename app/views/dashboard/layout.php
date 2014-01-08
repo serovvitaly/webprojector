@@ -40,11 +40,11 @@
         border-radius: 1px !important;
     }
     .super-title{
-        font-size: 46px;
+        font-size: 28px;
         font-weight: 300;
         margin: 0;
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
-        font-family: 'Open Sans', sans-serif;
+       /* text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15); */
+       /* font-family: 'Open Sans', sans-serif;  */
         /*font-family: 'Open Sans Condensed', sans-serif;*/
     }
   </style>
@@ -71,11 +71,11 @@ function builtLayout(){
     
     //$('.title').popup();
     
-    $('#dashboard-base-sidebar')
+    /*$('#dashboard-base-sidebar')
         .sidebar({overlay: false})
         .sidebar('toggle')
         .sidebar('attach events', '.sidebarer')
-    ;
+    ; */
     
     $('#modal-project-add')
         //.modal('setting', 'transition', 'fade down')
