@@ -16,6 +16,7 @@
         font-family: Tahoma !important;
         font-family: 'Open Sans', sans-serif;
         font-size: 13px;
+        font: normal 13px arial,sans-serif !important
     }
     .ui.menu{
         border-radius: 0;
@@ -95,7 +96,7 @@ function builtLayout(){
       
 </script>
 
-<script src="/app/dashboard.js?foo=<?= rand(1000, 9999) ?>"></script>
+<script src="/app/app.js?foo=<?= rand(1000, 9999) ?>"></script>
   
 </body>
 </html>

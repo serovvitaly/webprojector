@@ -16,6 +16,8 @@
 */
 Route::any('/sync/{model}/{id?}', 'SyncController@actionStore');
 
+Route::controller('/docs', 'DocsController');
+
 Route::controller('/dashboard', 'DashboardController');
 
 Route::controller('/', 'HomeController');
