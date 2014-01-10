@@ -5,13 +5,15 @@ var requireds = [
     '/packages/backbone/underscore-min.js',
     '/packages/backbone/backbone-min.js',
     '/packages/marionette/lib/backbone.marionette.js',
-    '/app/dashboard.js?foo='+Math.random(1000,9999)
+    '/app/dashboard.js?foo=' + Math.random(1000,9999)
 ];
 
 require.config({
     paths: {
         app: '/app',
-        packages: '/packages'
+        packages: '/packages',
+        views: '/app/views',
+        controllers: '/app/controllers',
     }
 });
 

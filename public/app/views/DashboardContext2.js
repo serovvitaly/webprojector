@@ -1,8 +1,7 @@
 // Центральная панель
-DashboardContext = Marionette.ItemView.extend({
+DashboardContext2 = Marionette.ItemView.extend({
     template: 'dashboard-context.tpl',
-    title: 'goo-foo-bar',
     model: new Backbone.Model({
-        title: 'остановись!'
+        title: 'Новый проект'
     })
 });

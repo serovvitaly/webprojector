@@ -3,7 +3,7 @@ DashboardBaseLayout = Marionette.Layout.extend({
     template: 'base-layout.tpl',
     events: {
         'click [data-action="project.modaladd.show"]' : function(){
-            Dashboard.projectsManager.showAddModal();
+            Dashboard.controller('DashboardProgectsMamager').showAddModal();
         }
     },
     regions: {
