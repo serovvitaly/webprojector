@@ -3,5 +3,4 @@ php:
   - 5.4
 install:
   - composer install
-phpunit:
-  - --bootstrap vendor/autoload.php app/tests/ExampleTest
+script: phpunit --configuration phpunit.xml --coverage-text
